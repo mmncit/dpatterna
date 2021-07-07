@@ -24,7 +24,8 @@
     "test": "yarn lint:types && jest --no-cache",
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
-    "lint:ci": "eslint . --ext .tsx,.ts"
+    "lint:ci": "eslint . --ext .tsx,.ts",
+    "test:dev": "jest --config jest.config.js"
   },
   "dependencies": {
     "ramda": "^0.27.0"
