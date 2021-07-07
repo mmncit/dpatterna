@@ -19,7 +19,7 @@ dependencies:
 Install assignment dependencies:
 
 ```bash
-$ yarn install
+$yarn install
 ```
 
 ## Making the test suite pass
@@ -27,7 +27,7 @@ $ yarn install
 Execute the tests with:
 
 ```bash
-$ yarn test
+$yarn test
 ```
 
 In the test suites all tests but the first have been skipped.
