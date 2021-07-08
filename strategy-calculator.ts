@@ -28,9 +28,15 @@ export class Addition implements Calculator {
   }
 }
 
-class Subtraction implements Calculator {
+export class Subtraction implements Calculator {
   calculate(a: number, b: number): number {
     return a - b;
+  }
+}
+
+export class Multiplication implements Calculator {
+  calculate(a: number, b: number): number {
+    return a * b;
   }
 }
 
