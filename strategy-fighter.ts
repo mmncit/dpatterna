@@ -14,17 +14,21 @@ export class Fighter {
     console.log(`${this.name} is diplaying`);
   }
   roll() {
-    console.log(`is rolling`);
+    return `is rolling`;
   }
   punch() {
-    console.log(`is punching`);
+    return `is punching`;
   }
+
+  /**
+   * the Context delegates some work to the strategy object instead of
+   * implementing multiple versions of the algorithm on its own.
+   */
   kick() {
-    // console.log(`is kicking`);
-    this.kickBehavior.kick();
+    return this.kickBehavior.kick();
   }
   jump() {
-    console.log(`is jumping`);
+    return `is jumping`;
   }
 }
 
@@ -35,48 +39,50 @@ interface KickBehavior {
 // concrete strategy
 class TornadoKick implements KickBehavior {
   kick() {
-    console.log(`is tornado kicking with full force`);
+    return `is tornado kicking with full force`;
   }
 }
 
 class LightningKick implements KickBehavior {
   kick() {
-    console.log(`is lightning kicking`);
+    return `is lightning kicking`;
   }
 }
 
-class NoKick implements KickBehavior {
-  kick() {}
+export class NoKick implements KickBehavior {
+  kick() {
+    return;
+  }
 }
 
 // Fighter1 and Fighter3 both of them use Tornado kick
 
-class Fighter1 extends Fighter {
+export class Fighter1 extends Fighter {
   constructor(name: string) {
     super(name, new TornadoKick());
   }
 }
 
-class Fighter2 extends Fighter {
+export class Fighter2 extends Fighter {
   constructor(name: string, kickBehavior: KickBehavior) {
     super(name, kickBehavior);
   }
 }
 
-class Fighter3 extends Fighter {
+export class Fighter3 extends Fighter {
   constructor(name: string) {
     super(name, new TornadoKick());
   }
 }
 
+/*
 // runtime
 let mustapha: Fighter = new Fighter1("Mustapha");
-mustapha.display();
-mustapha.kick();
+console.log(mustapha.kick());
+
 let hannah: Fighter = new Fighter3("Hannah");
-hannah.display();
-hannah.kick();
+console.log(hannah.kick());
 
 let jack: Fighter = new Fighter2("Jack", new NoKick());
-jack.display();
-jack.kick();
+console.log(jack.kick());
+*/
