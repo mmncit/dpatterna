@@ -7,17 +7,13 @@ on:
   pull_request:
     branches:
       - main
-  # Also trigger on page_build, as well as release created events
-  page_build:
-  release:
-    types: # This configuration does not affect the page_build event above
-      - created
 
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-node@v2
-  with:
-    node-version: '14'
-    cache: 'yarn'
-- run: yarn
-- run: yarn test
+jobs:
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+    with:
+      node-version: '12'
+      cache: 'yarn'
+  - run: yarn
+  - run: yarn test
