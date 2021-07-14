@@ -9,16 +9,17 @@
     "url": "https://github.com/mmncit/dpatterna"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.0.2",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.12",
+    "@types/ramda": "^0.26.41",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4",
-    "@types/ramda": "^0.26.41"
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "test": "jest --coverage --config jest.config.js --silent",
@@ -28,6 +29,7 @@
     "test:dev": "jest --config jest.config.js"
   },
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "ramda": "^0.27.0"
   }
 }
