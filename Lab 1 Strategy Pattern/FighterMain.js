@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var Strategy_StreetFighter_1 = require("./Strategy_StreetFighter");
+var ryu = new Strategy_StreetFighter_1.Fighter1("RYU", new Strategy_StreetFighter_1.TornedoKick, new Strategy_StreetFighter_1.LongJump);
+ryu.setJumpBehavior(new Strategy_StreetFighter_1.NoJump);
+ryu.display();
+ryu.kick();
+ryu.roll();
+var chun_li = new Strategy_StreetFighter_1.Fighter2("Chun-li", new Strategy_StreetFighter_1.LightingKick, new Strategy_StreetFighter_1.ShortJump);
+chun_li.setKickBehavior(new Strategy_StreetFighter_1.Nokick);
+chun_li.display();
+chun_li.kick();
+var mostofa = new Strategy_StreetFighter_1.Fighter3("Mostofa", new Strategy_StreetFighter_1.TornedoKick, new Strategy_StreetFighter_1.ShortJump);
+mostofa.display();
+mostofa.punch();
+mostofa.kick();
+mostofa.jump();
