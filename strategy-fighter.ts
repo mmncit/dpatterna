@@ -1,14 +1,20 @@
 export class Fighter {
   private name: string;
   kickBehavior: KickBehavior;
+  jumpBehaviour: JumpBehaviour;
 
-  constructor(name: string, kickBehavior: KickBehavior) {
+  constructor(name: string, kickBehavior: KickBehavior,jumpBehaviour: JumpBehaviour) {
     this.name = name;
     this.kickBehavior = kickBehavior;
+    this.jumpBehaviour=jumpBehaviour;
   }
   setKickBehavior(kickBehavior: KickBehavior) {
     this.kickBehavior = kickBehavior;
   }
+  setJumpBehavior(jumpBehaviour: JumpBehaviour) {
+    this.jumpBehaviour=jumpBehaviour;
+  }
+  
 
   display() {
     console.log(`${this.name} is diplaying`);
@@ -28,7 +34,7 @@ export class Fighter {
     return this.kickBehavior.kick();
   }
   jump() {
-    return `is jumping`;
+    return this.jumpBehaviour.jump();
   }
 }
 
@@ -36,7 +42,12 @@ interface KickBehavior {
   kick(): void;
 }
 
-// concrete strategy
+interface JumpBehaviour{
+  jump(): void;
+}
+
+
+// concrete strategy for kicks
 class TornadoKick implements KickBehavior {
   kick() {
     return `is tornado kicking with full force`;
@@ -46,6 +57,19 @@ class TornadoKick implements KickBehavior {
 class LightningKick implements KickBehavior {
   kick() {
     return `is lightning kicking`;
+  }
+}
+
+// concrete strategy for jumps
+class ShortJump implements JumpBehaviour {
+  jump() {
+    return `is short jumping`;
+  }
+}
+
+class LongJump implements JumpBehaviour {
+  jump() {
+    return `is long jumping`;
   }
 }
 
@@ -59,30 +83,29 @@ export class NoKick implements KickBehavior {
 
 export class Fighter1 extends Fighter {
   constructor(name: string) {
-    super(name, new TornadoKick());
+    super(name, new TornadoKick(),new ShortJump());
   }
 }
 
-export class Fighter2 extends Fighter {
-  constructor(name: string, kickBehavior: KickBehavior) {
-    super(name, kickBehavior);
-  }
-}
+//export class Fighter2 extends Fighter {
+//  constructor(name: string, kickBehavior: KickBehavior) {
+//    super(name, new kickBehavior,jumpBehaviour);
+//  }
+//}
 
 export class Fighter3 extends Fighter {
   constructor(name: string) {
-    super(name, new TornadoKick());
+    super(name, new TornadoKick(),new LongJump());
   }
 }
 
-/*
+
 // runtime
 let mustapha: Fighter = new Fighter1("Mustapha");
-console.log(mustapha.kick());
+console.log(mustapha.jump());
 
 let hannah: Fighter = new Fighter3("Hannah");
-console.log(hannah.kick());
+console.log(hannah.jump());
 
-let jack: Fighter = new Fighter2("Jack", new NoKick());
-console.log(jack.kick());
-*/
+//let jack: Fighter = new Fighter2("Jack", new NoKick());
+//console.log(jack.kick());
