@@ -1,4 +1,4 @@
-import RunLengthEncoding from "./run-length-encoding";
+import RunLengthEncoding from "../utils/run-length-encoding";
 
 describe("run-length encode a string", () => {
   it("empty string", () => {

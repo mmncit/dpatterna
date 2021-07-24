@@ -3,7 +3,7 @@ import {
   Addition,
   Subtraction,
   Multiplication,
-} from "./strategy-calculator";
+} from "../patterns/strategy/strategy-calculator";
 
 describe("Calculator context", () => {
   const context = new Context(new Addition());
