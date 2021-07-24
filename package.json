@@ -17,23 +17,38 @@
     "@typescript-eslint/parser": "^2.3.3",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "@types/page": "^1.8.0",
+    "css-loader": "^3.6.0",
+    "jest": "^26.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
+    "raw-loader": "^4.0.1",
+    "style-loader": "^1.2.1",
+    "svelte-loader": "^2.13.6",
+    "ts-jest": "^26.1.1",
+    "ts-loader": "^7.0.5",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslib": "^2.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "test": "jest --coverage --config jest.config.js --silent",
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts",
-    "test:dev": "jest --config jest.config.js"
+    "test:dev": "jest --config jest.config.js",
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch --mode=development",
+    "start": "webpack-dev-server --config webpack.config.js --history-api-fallback --content-base public"
   },
   "dependencies": {
     "crypto-js": "^4.0.0",
     "ramda": "^0.27.0",
     "svelte": "^3.38.3",
-    "svelte-loader": "^3.1.2",
-    "ts-loader": "^9.2.3",
-    "webpack-dev-server": "^3.11.2"
+    "page": "^1.11.6"
   }
 }
