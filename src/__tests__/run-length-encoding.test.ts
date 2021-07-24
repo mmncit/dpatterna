@@ -1,7 +1,7 @@
 import RunLengthEncoding from "../utils/run-length-encoding";
 
 describe("run-length encode a string", () => {
-  it("empty string", () => {
+  test("empty string", () => {
     const expected = "";
     expect(RunLengthEncoding.encode("")).toEqual(expected);
   });
