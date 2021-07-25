@@ -1,3 +1,13 @@
+<script>
+  import {
+    htmlString,
+    italicHtmlString,
+    boldItalicHtmlString,
+    strikeBoldItalicHtmlString,
+  } from "./decorator-provider";
+
+</script>
+
 <style>
   p {
     color: purple;
@@ -7,4 +17,13 @@
 
 </style>
 
-<p>Hello, Decorator!</p>
+<p>{htmlString.getHTMLString()}</p>
+<p>
+  {@html italicHtmlString.getHTMLString()}
+</p>
+<p>
+  {@html boldItalicHtmlString.getHTMLString()}
+</p>
+<p>
+  {@html strikeBoldItalicHtmlString.getHTMLString()}
+</p>
