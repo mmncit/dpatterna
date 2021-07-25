@@ -1,4 +1,4 @@
-export const HTML_STRING = "Hello, world!";
+export const HTML_STRING = "Hello, Decorator!";
 export interface HtmlStyle {
   getHTMLString(): string;
 }
