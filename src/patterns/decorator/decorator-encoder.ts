@@ -17,7 +17,7 @@ export class StringEncoder implements Encoder {
 }
 
 // decorator
-export abstract class EncoderDecorator implements Encoder {
+abstract class EncoderDecorator implements Encoder {
   private decoratorEncoder: Encoder;
 
   constructor(decoratorEncoder: Encoder) {

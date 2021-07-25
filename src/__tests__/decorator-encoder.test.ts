@@ -1,11 +1,10 @@
 import {
   CryptoEncoder,
-  EncoderDecorator,
   RunLengthEncoder,
   StringEncoder,
 } from "patterns/decorator/decorator-encoder";
 
-describe("decorator encoder", () => {
+describe("encoder decorator", () => {
   test("encrypt followed by compression gives original string when decompression followed by decrypting", () => {
     // create a encoder = crypto -> rle
     let encoder = new StringEncoder();
