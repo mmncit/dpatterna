@@ -50,6 +50,15 @@ module.exports = (env, argv) => {
           ],
         },
         {
+          test: /\.(frag|vert|glsl)$/,
+          use: [
+            {
+              loader: "glsl-shader-loader",
+              options: {},
+            },
+          ],
+        },
+        {
           test: /\.tsx?$/,
           // use: 'ts-loader',
           // exclude: /node_modules/,
