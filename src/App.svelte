@@ -3,10 +3,14 @@
   import Home from "./pages/Home.svelte";
   import HelloWorld from "./pages/hello-world/Page.svelte";
   import HelloDecorator from "./pages/hello-decorator/Page.svelte";
+  import HelloFactory from "./pages/hello-factory/Page.svelte";
+  import HelloAbstractFactory from "./pages/hello-abstract-factory/Page.svelte";
 
   const examples = [
     { title: "hello-world", component: HelloWorld },
     { title: "hello-decorator", component: HelloDecorator },
+    { title: "hello-factory", component: HelloFactory },
+    { title: "hello-abstract-factory", component: HelloAbstractFactory },
   ];
 
   let page;
