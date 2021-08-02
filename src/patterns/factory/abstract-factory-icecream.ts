@@ -3,6 +3,8 @@
 // concrete products are implemented from product
 
 // product1 interface
+import {ChocoCart} from "./factory-icecream";
+
 interface Icecream {
   get(): string; // return the flavor of icecream
 }
@@ -114,3 +116,34 @@ export class StrawberryCupCart extends IceCreamFactory {
     return new CupContainer();
   }
 }
+
+export class ChocoConeCart extends IceCreamFactory{
+  public getIcecreamFromfactory(): Icecream {
+    return new ChocoIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+
+}
+
+export class StrawberryConeCart extends IceCreamFactory{
+  public getIcecreamFromfactory(): Icecream {
+    return new StrawberryIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+
+}
+
+export class ButterscotchConeCart extends IceCreamFactory{
+  public getIcecreamFromfactory(): Icecream {
+    return new ButterscotchIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+
+}
+
