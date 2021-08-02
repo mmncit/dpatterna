@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var boldDecorator_1 = require("./boldDecorator");
+var italicDecorator_1 = require("./italicDecorator");
+var strikeDecorator_1 = require("./strikeDecorator");
+var userInput_1 = require("./userInput");
+var text1 = new userInput_1.UserInput("Farzana Tabassum");
+var deco1 = new boldDecorator_1.BoldDecorator(text1);
+console.log("bold word: ");
+text1.displayOutput(deco1);
+var deco2 = new italicDecorator_1.ItalicDecorator(deco1);
+console.log("\n\nbold and italic word: ");
+text1.displayOutput(deco2);
+var deco3 = new strikeDecorator_1.StrikeDecorator(deco2);
+console.log("\n\nbold, italic and strike word: ");
+text1.displayOutput(deco3);
