@@ -1,17 +1,9 @@
-name: CI
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+name: dpatterna ci
+on: [push, pull_request]
 
 jobs:
   build:
-    name: Test
+    name: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
