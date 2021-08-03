@@ -1,19 +1,24 @@
+name: Action
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-    with:
-      node-version: '12'
-      cache: 'yarn'
-  - run: yarn
-  - run: yarn test
+  test:
+    name: Running unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+        cache: 'yarn'
+    - run: yarn
+    - run: yarn test
