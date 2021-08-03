@@ -1,13 +1,13 @@
 import {
   ButterscotchCupCart,
   ButterscotchStickCart,
+  ButterscotchConeCart,
   ChocoCupCart,
   ChocoStickCart,
+  ChocoConeCart,
   StrawberryCupCart,
   StrawberryStickCart,
-  ChocoConeCart,
-  StrawberryConeCart,
-  ButterscotchConeCart
+  StrawberryConeCart
 } from "patterns/factory/abstract-factory-icecream";
 
 function orderHandler(selectedMenu: string, selectedContainer: string) {
