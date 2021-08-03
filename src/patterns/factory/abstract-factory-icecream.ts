@@ -88,6 +88,7 @@ export class StrawberryStickCart extends IceCreamFactory {
   }
 }
 
+
 export class ChocoCupCart extends IceCreamFactory {
   public getIcecreamFromfactory(): Icecream {
     return new ChocoIcecream();
@@ -112,5 +113,32 @@ export class StrawberryCupCart extends IceCreamFactory {
   }
   public getContainerfromfactory(): IcecreamContainer {
     return new CupContainer();
+  }
+}
+
+export class ChocoConeCart extends IceCreamFactory {
+  public getIcecreamFromfactory(): Icecream {
+    return new ChocoIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+}
+
+export class ButterscotchConeCart extends IceCreamFactory {
+  public getIcecreamFromfactory(): Icecream {
+    return new ButterscotchIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+}
+
+export class StrawberryConeCart extends IceCreamFactory {
+  public getIcecreamFromfactory(): Icecream {
+    return new StrawberryIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
   }
 }
