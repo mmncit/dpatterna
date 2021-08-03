@@ -1,7 +1,7 @@
 import {ChocoStickCart,StrawberryConeCart,ButterscotchCupCart, StrawberryStickCart, ChocoConeCart} from "../patterns/factory/abstract-factory-icecream";
 import {getIcecream} from "../pages/hello-abstract-factory/prouct-provider"
 
-describe("Abstract factory icecream test", () => {
+describe("Test", () => {
     test('Sweety Strawberry on stick test', () => {
         let expected = getIcecream('Sweety Strawberry','Stick');
         let reality = new StrawberryStickCart();
@@ -21,3 +21,4 @@ describe("Abstract factory icecream test", () => {
     })
 
 })
+
