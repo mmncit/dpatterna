@@ -22,40 +22,40 @@ describe("Icecream Factory", () => {
  
      })
 
-     test('Buttery Butterscotch on Stick',()=>{
+     test('Butterscotch on Stick',()=>{
         let expectation =getIcecream('Buttery Butterscotch','Stick')
          let reality = new ButterscotchStickCart()
          expect(expectation).toEqual(reality.getIcecream())
  
      })
 
-     test('Buttery Butterscotch on Cup',()=>{
+     test('Butterscotch on Cup',()=>{
         let expectation =getIcecream('Buttery Butterscotch','Cup')
          let reality = new ButterscotchCupCart()
          expect(expectation).toEqual(reality.getIcecream())
  
      })
 
-    test('Buttery Butterscotch on Cone',()=>{
+    test('Butterscotch on Cone',()=>{
        let expectation =getIcecream('Buttery Butterscotch','Cone')
         let reality = new ButterscotchConeCart()
         expect(expectation).toEqual(reality.getIcecream())
 
     })
 
-    test('Choco Ice cream on Stick',()=>{
+    test('Choco Icecream on Stick',()=>{
         let expectation =getIcecream('Choco Blast','Stick')
         let reality = new ChocoStickCart()
         expect(expectation).toEqual(reality.getIcecream())
     })
     
-    test('Choco Ice cream on Cup',()=>{
+    test('Choco Icecream on Cup',()=>{
         let expectation =getIcecream('Choco Blast','Cup')
         let reality = new ChocoCupCart()
         expect(expectation).toEqual(reality.getIcecream())
     })
 
-    test('Choco Ice cream on Cone',()=>{
+    test('Choco Icecream on Cone',()=>{
         let expectation =getIcecream('Choco Blast','Cone')
         let reality = new ChocoConeCart()
         expect(expectation).toEqual(reality.getIcecream())
