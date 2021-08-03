@@ -51,7 +51,7 @@ class ConeContainer implements IcecreamContainer {
 
 // abstract factory
 abstract class IceCreamFactory {
-  public abstract getIcecreamFromfactory(): Icecream;
+  public abstract getIcecreamFromfactory(): Icecream;         //produce ice cream
   public abstract getContainerfromfactory(): IcecreamContainer;
   public getIcecream() {
     const icecream = this.getIcecreamFromfactory();
