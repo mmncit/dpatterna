@@ -4,7 +4,7 @@ import {
   Fighter2,
   Fighter3,
   NoKick,
-} from "./strategy-fighter";
+} from "../patterns/strategy/strategy-fighter";
 
 describe("Fighter context", () => {
   it("Fighter1 and Fighter3 both of them should use Tornado kick", () => {

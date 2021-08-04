@@ -1,19 +1,18 @@
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+name: dpatterna ci
+on: [push, pull_request]
 
 jobs:
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-    with:
-      node-version: '12'
-      cache: 'yarn'
-  - run: yarn
-  - run: yarn test
+  build:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: test # will run `yarn test` command
