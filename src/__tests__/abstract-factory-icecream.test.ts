@@ -12,7 +12,8 @@ import {
 
 import {
     getIcecream
-} from "../pages/hello-abstract-factory/prouct-provider"
+} from "../pages/hello-abstract-factory/prouct-provider";
+
 describe("Icecream Factory", () => {
 
      test('Butterscotch ice cream on Stick',()=>{
