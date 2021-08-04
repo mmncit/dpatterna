@@ -1,15 +1,23 @@
-import {ChocoCart,StrawberryCart} from "../patterns/factory/factory-icecream";
+import {ChocoCart, ButterscotchCart, StrawberryCart} from "../patterns/factory/factory-icecream";
 import {getIcecream} from "../pages/hello-factory/prouct-provider"
 
-describe("Icecream Factory", () => {
-    test('Choclate Icecream',()=>{
-        let expectation=getIcecream('Choco Blast')
-        let reality=new ChocoCart()
-        expect(expectation).toEqual(reality.getIcecream())
+describe("Factory icecream test", () => {
+    test('Choco Blast icecream test', () => {
+        let expected = getIcecream('Choco Blast');
+        let reality = new ChocoCart();
+        expect(expected).toEqual(reality.getIcecream());
     })
-    test('Strawberry Ice cream',()=>{
-        let expectation=getIcecream('Sweety Strawberry')
-        let reality=new StrawberryCart()
-        expect(expectation).toEqual(reality.getIcecream())
+
+    test('Buttery Butterscotch icecream test', () => {
+        let expected = getIcecream("Buttery Butterscotch");
+        let reality = new ButterscotchCart();
+        expect(expected).toEqual(reality.getIcecream());
     })
+
+    test('Sweety Strawberry icecream test', () => {
+        let expected = getIcecream('Sweety Strawberry');
+        let reality = new StrawberryCart();
+        expect(expected).toEqual(reality.getIcecream());
+    })
+
 })
