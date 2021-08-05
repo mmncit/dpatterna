@@ -23,7 +23,7 @@ class StrawberryIcecream implements Icecream {
     return "strawberry";
   }
 }
-
+ 
 // product2 interface
 interface IcecreamContainer {
   getContainedIcecream(icecream: Icecream): string;
