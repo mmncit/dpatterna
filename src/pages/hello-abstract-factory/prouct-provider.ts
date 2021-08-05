@@ -6,8 +6,10 @@ import {
   StrawberryCupCart,
   StrawberryStickCart,
   StrawberryConeCart,
+  ChocoConeCart,
   ButterscotchConeCart,
-  ChocolateConeCart
+  
+  
 } from "patterns/factory/abstract-factory-icecream";
 
 function orderHandler(selectedMenu: string, selectedContainer: string) {
@@ -32,15 +34,21 @@ function orderHandler(selectedMenu: string, selectedContainer: string) {
     case "Buttery Butterscotch on Cup":
       return new ButterscotchCupCart();
       break;
+    case "Choco Blast on Cone":
+      return new ChocoConeCart();
+      break;
     case "Sweety Strawberry on Cone":
-      return new StrawberryConeCart()
+      return new StrawberryConeCart();
       break;
     case "Buttery Butterscotch on Cone":
       return new ButterscotchConeCart();
       break;
-    case "Choco Blast on Cone":
-      return new ChocolateConeCart();
-      break;
+      case "Sweety Strawberry on Cone":
+        return new StrawberryConeCart()
+        break;
+      case "Buttery Butterscotch on Cone":
+        return new ButterscotchConeCart();
+        break;
     default:
     // code block
   }

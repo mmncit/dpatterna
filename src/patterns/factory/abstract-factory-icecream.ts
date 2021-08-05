@@ -32,7 +32,6 @@ interface IcecreamContainer {
 // concrete product2
 class StickContainer implements IcecreamContainer {
   getContainedIcecream(icecream: Icecream): string {
-    console.log(`stick/${icecream.get()}`);
     return `stick/${icecream.get()}`;
   }
 }
@@ -114,6 +113,19 @@ export class StrawberryCupCart extends IceCreamFactory {
     return new CupContainer();
   }
 }
+
+export class ChocoConeCart extends IceCreamFactory {
+  public getIcecreamFromfactory(): Icecream {
+    return new ChocoIcecream();
+  }
+  public getContainerfromfactory(): IcecreamContainer {
+    return new ConeContainer();
+  }
+}
+
+
+
+
 export class StrawberryConeCart extends IceCreamFactory{
   public getIcecreamFromfactory(): Icecream {
     return new StrawberryIcecream();
