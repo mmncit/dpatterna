@@ -5,3 +5,4 @@ package-lock.json
 coverage/
 .github/*
 public/build/*
+src/__tests__/abstract-factory-icecream.test.ts
