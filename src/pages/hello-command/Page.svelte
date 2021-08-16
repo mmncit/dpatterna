@@ -1,6 +1,7 @@
 <script>
 
   import{commandHandler} from "./command-provider"
+
     let commands = {
         on: "on",
         red0:"red/0",
@@ -9,15 +10,15 @@
         red3: "red/3",
         off: "off",
     };
-
-    let lightState = "on"
-    let src = `./images/light-receiver/${commands[lightState]}.png`;
-    
+    let lightState
+    let src
     function setCommand(any){
+
         lightState=commandHandler(any);
         src=`./images/light-receiver/${commands[lightState]}.png`;
     }
-
+   
+    setCommand("off")
 
 </script>
 
