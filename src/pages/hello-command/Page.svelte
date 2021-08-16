@@ -1,12 +1,26 @@
 <script>
-  let commands = {
-    on: "on",
-    red1: "red/1",
-  };
 
-  let src = `./images/light-receiver/${commands["on"]}.png`;
+  import{commandHandler} from "./command-provider"
+    let commands = {
+        on: "on",
+        red0:"red/0",
+        red1: "red/1",
+        red2: "red/2",
+        red3: "red/3",
+        off: "off",
+    };
+
+    let lightState = "off"
+    let src = `./images/light-receiver/${commands[lightState]}.png`;
+    
+    function setCommand(any){
+        lightState=commandHandler(any);
+        src=`./images/light-receiver/${commands[lightState]}.png`;
+    }
+
 
 </script>
+
 
 <style>
   .btn-group button {
@@ -56,13 +70,14 @@
 <h1>Command buttons</h1>
 
 <div class="btn-group">
-  <button class="on">On</button>
-  <button class="off">Off</button>
 
-  <button class="increase-lum">+</button>
-  <button class="decrease-lum">-</button>
+  <button class="on" on:click={()=>{setCommand('on')}}>On</button>
+  <button class="off" on:click={()=>{setCommand('off')}}>Off</button>
 
-  <button class="red-light">Red</button>
+  <button class="increase-lum" on:click={()=>{setCommand('increase')}}>+</button>
+  <button class="decrease-lum" on:click={()=>{setCommand('decrease')}}>-</button>
+
+  <button class="red-light" on:click={()=>{setCommand('red')}}>Red</button>
 </div>
 
 <div class="portrait"><img {src} alt={src} /></div>
