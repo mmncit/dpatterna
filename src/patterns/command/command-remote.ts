@@ -25,6 +25,10 @@ export class Invoker {
 
 }
 
+export class Light {
+
+}
+
 
 export class NormalLight {
 
@@ -48,12 +52,18 @@ export class RedLight {
     }
 
     public increaseLuminosity(): string {
-        brightness++;
+        if(brightness < 3)
+        {
+            brightness++;
+        }
         return `red${brightness}`
     }
 
     public decreaseLuminosity(): string {
-        brightness--;
+        if(brightness > 0)
+        {
+            brightness--;
+        }
         return `red${brightness}`
 
     }

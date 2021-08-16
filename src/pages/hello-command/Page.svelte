@@ -10,7 +10,7 @@
         off: "off",
     };
 
-    let lightState = "off"
+    let lightState = "on"
     let src = `./images/light-receiver/${commands[lightState]}.png`;
     
     function setCommand(any){
