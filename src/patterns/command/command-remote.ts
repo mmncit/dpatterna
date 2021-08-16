@@ -25,9 +25,6 @@ export class Invoker {
 
 }
 
-export class Light {
-
-}
 
 
 export class NormalLight {
@@ -104,7 +101,6 @@ export class LightOffCommand implements ICommand {
     } 
 
 }
-
 
 export class RedLightOn implements ICommand {
     
