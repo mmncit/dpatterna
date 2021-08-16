@@ -41,7 +41,7 @@ export class NormalLight {
 export class RedLight {
 
     public lightOn(): string {
-        return `red${brightness}`
+        return `red0`
     }
 
     public lightOff(): string {
