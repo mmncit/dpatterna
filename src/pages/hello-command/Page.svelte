@@ -10,18 +10,17 @@
     red3:"red/3",
   };
 
-  let commandType = "off";
-  let src = `./images/light-receiver/${commands[commandType]}.png`;
+//light is off before clicking any button
+//CommandButton=light scenerio after executing command
+  let commandButton = "off";
+  let src = `./images/light-receiver/${commands[commandButton]}.png`;
 
   function executeCommand(command) {
-    console.log("src ", command);
-    commandType = setLightCommands(command);
-    src = `./images/light-receiver/${commands[commandType]}.png`;
-    console.log(commandType);
+    commandButton = setLightCommands(command);
+    src = `./images/light-receiver/${commands[commandButton]}.png`;
   }
 
 </script>
-
 <style>
   .btn-group button {
     padding: 10px 24px;
@@ -29,16 +28,13 @@
     width: 20%;
     display: block;
   }
-
   .btn-group button:not(:last-child) {
     border-bottom: none; /* Prevent double borders */
   }
-
   /* Add a background color on hover */
   .btn-group button:hover {
     filter: brightness(85%);
   }
-
   .decrease-lum {
     background-color: #a9c1c9;
   }
@@ -64,7 +60,6 @@
     height: 300px;
     width: 500px;
   }
-
 </style>
 
 <h1>Command buttons</h1>
