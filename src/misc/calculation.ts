@@ -7,7 +7,6 @@ export function multiply(a: number, b: number) {
 }
 
 export function divide(a: number, b: number) {
-  if (b === 0) return NaN;
   return a / b;
 }
 
