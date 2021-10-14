@@ -32,7 +32,7 @@ interface IcecreamContainer {
 // concrete product2
 class StickContainer implements IcecreamContainer {
   getContainedIcecream(icecream: Icecream): string {
-    console.log(`stick/${icecream.get()}`);
+    // console.log(`stick/${icecream.get()}`);
     return `stick/${icecream.get()}`;
   }
 }
