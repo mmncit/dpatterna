@@ -11,7 +11,7 @@ export class Fighter {
   }
 
   display() {
-    console.log(`${this.name} is diplaying`);
+    // console.log(`${this.name} is diplaying`);
   }
   roll() {
     return `is rolling`;

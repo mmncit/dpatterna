@@ -15,7 +15,6 @@
 
   onMount(async () => {
     const data = await produceData();
-    console.log({ data });
 
     d3.select(el)
       .selectAll("div")
