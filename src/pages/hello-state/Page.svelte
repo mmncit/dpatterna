@@ -1,11 +1,14 @@
 <script>
-  import { getState } from "./state-provider";
+  import{Gate,getState}from "./state-provider";
+
+  let gate=new Gate()
 
   const refImg = `./images/gate-state/gate_state.png`;
   let selectedAction = "enter";
   let action = ["enter", "payOk", "payFailed"];
 
-  $: state = getState(selectedAction);
+  $: gate = getState(selectedAction,gate);
+  $:state=gate.getState();
 
   $: src = `./images/gate-state/${state}.png`;
 
