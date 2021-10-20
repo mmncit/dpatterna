@@ -7,12 +7,12 @@ import {
   StrawberryStickCart,
   ChocoConeCart,
   ButterscotchConeCart,
-  StrawberryConeCart
+  StrawberryConeCart,
 } from "patterns/factory/abstract-factory-icecream";
 
 function orderHandler(selectedMenu: string, selectedContainer: string) {
   const combinedOrder = `${selectedMenu} on ${selectedContainer}`;
-  console.log({ combinedOrder });
+
   switch (combinedOrder) {
     case "Choco Blast on Stick":
       return new ChocoStickCart();
