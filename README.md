@@ -34,3 +34,10 @@ yarn # install dependencies
 
 yarn start # invoke development with webpack-dev-server
 ```
+
+## Execute a script as `node` + `tsc`
+
+```bash
+yarn ts-node <file_path>
+# e.g. $yarn ts-node src/functional/closure/adjectifier.ts
+```
