@@ -8,6 +8,7 @@
   import HelloCommand from "./pages/hello-command/Page.svelte";
   import HelloIterator from "./pages/hello-iterator/Page.svelte";
   import HelloState from "./pages/hello-state/Page.svelte";
+  import WebWorker from "./pages/web-worker/Page.svelte";
 
   const examples = [
     { title: "hello-world", component: HelloWorld },
@@ -17,6 +18,7 @@
     { title: "hello-command", component: HelloCommand },
     { title: "hello-iterator", component: HelloIterator },
     { title: "hello-state", component: HelloState },
+    { title: "web-worker", component: WebWorker },
   ];
 
   let page;
