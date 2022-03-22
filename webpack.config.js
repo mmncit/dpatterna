@@ -3,6 +3,7 @@ const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const path = require("path");
 
 module.exports = (env, argv) => {
+  console.log({ env, argv });
   const extensions = [".mjs", ".js", ".ts", ".svelte"];
   const mainFields = ["svelte", "browser", "module", "main"];
 
@@ -47,15 +48,6 @@ module.exports = (env, argv) => {
              * */
             prod ? MiniCssExtractPlugin.loader : "style-loader",
             "css-loader",
-          ],
-        },
-        {
-          test: /\.(frag|vert|glsl)$/,
-          use: [
-            {
-              loader: "glsl-shader-loader",
-              options: {},
-            },
           ],
         },
         {

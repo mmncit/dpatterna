@@ -30,16 +30,7 @@ module.exports = {
   resetMocks: true,
   moduleDirectories: ["node_modules", "src"],
   testURL: "http://localhost",
-  moduleFileExtensions: [
-    "js",
-    "jsx",
-    "json",
-    "ts",
-    "tsx",
-    "glsl",
-    "vert",
-    "frag",
-  ],
+  moduleFileExtensions: ["js", "jsx", "json", "ts", "tsx"],
   modulePathIgnorePatterns: ["/node_modules/"],
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
