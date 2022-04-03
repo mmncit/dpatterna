@@ -1,13 +1,13 @@
 import { add } from "ramda";
 
-interface NewUser {
+export interface NewUser {
   name: string;
   score: number;
   increment: Function;
   login: Function;
 }
 
-const userFunctionStore = {
+export const userFunctionStore = {
   increment: function () {
     // TODO: seek for the best typing
     (this as unknown as NewUser).score++;

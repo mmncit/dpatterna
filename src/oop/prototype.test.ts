@@ -52,4 +52,27 @@ describe("prototype", () => {
     user1.arrowIncrement();
     expect(user1.score).toBe(10);
   });
+
+  test("proto is built into every object in JavaScript", () => {
+    const obj = { num: 3 };
+    // In addition to proto, hasOwnProperty is a built-in method that has bonus functionality afforded to it
+    expect(obj.hasOwnProperty("num")).toBeTruthy();
+    expect(Object.prototype.hasOwnProperty).toBeTruthy();
+  });
+
+  test("function prototype", () => {
+    // js provides Function object for functions in addition to Object object
+    expect(Function.prototype.call).toBeTruthy();
+    expect(Function.prototype.bind).toBeTruthy();
+    expect(Function.prototype.toString).toBeTruthy();
+
+    const funcString = multiplyBy2.toString();
+    console.log({ funcString });
+    expect(funcString).toBe(
+      "function multiplyBy2(num) {\n" +
+        "    // functions are objects (function object combo!)\n" +
+        "    return num * 2;\n" +
+        "}"
+    );
+  });
 });
