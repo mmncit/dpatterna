@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const path = require("path");
 
-module.exports = (argv) => {
+module.exports = (env, argv) => {
   const extensions = [".mjs", ".js", ".ts", ".svelte"];
   const mainFields = ["svelte", "browser", "module", "main"];
 

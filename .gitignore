@@ -6,3 +6,4 @@ coverage/
 .github/*
 public/build/*
 .vscode
+cpplib/build/*
