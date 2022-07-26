@@ -1,6 +1,6 @@
 # dpatterna
 
-The classical introductory exercises for different design patterns
+Design pattern are well-known solutions to recurring problems. This repo holds some of the classical introductory exercises for different design patterns
 
 ## Setup
 

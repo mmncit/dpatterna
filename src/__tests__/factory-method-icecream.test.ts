@@ -1,4 +1,4 @@
-import { ChocoCart, StrawberryCart } from "../patterns/factory/factory-icecream";
+import { ChocoCart, StrawberryCart } from "../patterns/creational/factory/factory-icecream";
 import { getIcecream } from "../pages/hello-factory/prouct-provider";
 
 

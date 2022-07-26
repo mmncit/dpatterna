@@ -8,7 +8,7 @@ import {
   ChocoConeCart,
   ButterscotchConeCart,
   StrawberryConeCart,
-} from "patterns/factory/abstract-factory-icecream";
+} from "patterns/creational/factory/abstract-factory-icecream";
 
 function orderHandler(selectedMenu: string, selectedContainer: string) {
   const combinedOrder = `${selectedMenu} on ${selectedContainer}`;

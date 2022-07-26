@@ -2,7 +2,7 @@ import {
   ChocoCart,
   StrawberryCart,
   ButterscotchCart,
-} from "patterns/factory/factory-icecream";
+} from "patterns/creational/factory/factory-icecream";
 
 function orderHandler(selected: string) {
   switch (selected) {

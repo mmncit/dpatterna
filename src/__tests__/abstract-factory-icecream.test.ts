@@ -1,4 +1,4 @@
-import { ButterscotchConeCart, StrawberryStickCart, ChocoCupCart } from "../patterns/factory/abstract-factory-icecream";
+import { ButterscotchConeCart, StrawberryStickCart, ChocoCupCart } from "../patterns/creational/factory/abstract-factory-icecream";
 import { getIcecream } from "../pages/hello-abstract-factory/prouct-provider";
 
 
