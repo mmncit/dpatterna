@@ -7,3 +7,7 @@ coverage/
 public/build/*
 .vscode
 cpplib/build/*
+
+# ignore compiled py
+__pycache__/
+ *.pyc
