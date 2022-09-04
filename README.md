@@ -2,14 +2,7 @@
 
 Design pattern are well-known solutions to recurring problems. This repo holds some of the classical introductory exercises for different design patterns
 
-## Setup
-
-Go through the setup instructions for TypeScript to install the necessary
-dependencies based on OS:
-
-[https://exercism.io/tracks/typescript/installation](https://exercism.io/tracks/typescript/installation)
-
-### OR
+# For `ts`/`js` files:
 
 ## Install dependencies
 
@@ -40,4 +33,18 @@ yarn start # invoke development with webpack-dev-server
 ```bash
 yarn ts-node <file_path>
 # e.g. $yarn ts-node src/functional/closure/adjectifier.ts
+```
+
+# For `py` files: (python version >= 3)
+Just run with 
+
+```sh
+python <file_path>
+```
+
+or
+
+
+```sh
+python3 <file_path>
 ```
