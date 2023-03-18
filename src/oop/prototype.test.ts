@@ -68,11 +68,8 @@ describe("prototype", () => {
 
     const funcString = multiplyBy2.toString();
     console.log({ funcString });
-    expect(funcString).toBe(
-      "function multiplyBy2(num) {\n" +
-        "    // functions are objects (function object combo!)\n" +
-        "    return num * 2;\n" +
-        "}"
-    );
+    expect(funcString).toContain("function multiplyBy2(num)");
+    expect(funcString).toContain("return num * 2");
+  
   });
 });

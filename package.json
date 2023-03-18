@@ -1,7 +1,7 @@
 {
-  "name": "@dpatterna/typescript",
+  "name": "@mmncit/dpatterna",
   "version": "1.0.0",
-  "description": "design pattern exercises in Typescript.",
+  "description": "playground with design pattern examples",
   "author": "mmncit",
   "private": true,
   "repository": {
@@ -37,8 +37,12 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+    
   },
+  "homepage": "https://mmncit.github.io/dpatterna",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public",
     "test": "jest --coverage --config jest.config.js --silent",
     "lint": "yarn lint:types && yarn lint:ci",
     "lint:types": "yarn tsc --noEmit -p .",
@@ -61,6 +65,7 @@
     "svelte": "^3.38.3",
     "three": "0.128.0",
     "ts-node": "^10.7.0",
-    "unfetch": "^4.2.0"
+    "unfetch": "^4.2.0",
+    "gh-pages": "^4.0.0"
   }
 }

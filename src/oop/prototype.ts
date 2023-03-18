@@ -1,5 +1,3 @@
-import { add } from "ramda";
-
 export interface NewUser {
   name: string;
   score: number;
@@ -31,7 +29,7 @@ export function multiplyBy2(num: number) {
 
 // -- new keyword and prototype chaining
 
-export const UserCreator = function (name: string, score: number) {
+export const UserCreator = function (this: NewUser, name: string, score: number) {
   this.name = name;
   this.score = score;
 };
