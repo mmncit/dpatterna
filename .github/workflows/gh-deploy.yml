@@ -4,24 +4,26 @@ on:
   push:
     branches:
       - master
+
 jobs:
   build-and-deploy:
+    name: deploy to gh pages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-      - name: Setup NODE
-        uses: actions/setup-node@v2
-        with:
-          node-version: '17'
-      - run: node --version
-        env:
-          NODE_OPTIONS: '--openssl-legacy-provider'
+      - uses: actions/checkout@v3
 
-      - name: Build web
-        run: |
-          npm install --legacy-peer-deps
-          npm run predeploy
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: predeploy # will run `yarn build` command
 
       - name: Build and deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
