@@ -1,7 +1,6 @@
 <script>
   import { getState } from "./state-provider";
 
-  const refImg = `./images/gate-state/gate_state.png`;
   let selectedAction = "enter";
   let action = ["enter", "payOk", "payFailed"];
 
@@ -54,8 +53,6 @@
     <td>open</td>
   </tr>
 </table>
-
-<div class="portrait"><img src={refImg} alt={refImg} /></div>
 
 <h2>Actions</h2>
 
