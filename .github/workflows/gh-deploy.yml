@@ -21,9 +21,9 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
+      - uses: borales/actions-yarn@v4
         with:
-          cmd: predeploy # will run `yarn build` command
+          cmd: predeploy # will run `yarn predeploy` command
 
       - name: Build and deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
