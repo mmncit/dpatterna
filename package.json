@@ -39,6 +39,7 @@
     "webpack-dev-server": "^3.11.0"
     
   },
+  "resolutions": { "@types/babel__traverse": "7.0.6" },
   "homepage": "https://mmncit.github.io/dpatterna",
   "scripts": {
     "predeploy": "npm run build",

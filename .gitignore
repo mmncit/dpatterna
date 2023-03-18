@@ -3,7 +3,6 @@ yarn.lock
 package-lock.json
 .DS_Store
 coverage/
-.github/*
 public/build/*
 .vscode
 cpplib/build/*

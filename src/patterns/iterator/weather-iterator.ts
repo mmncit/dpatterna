@@ -10,7 +10,7 @@ export async function getTemperatureFromOW(cityName: string) {
 
 export class CityWeather {
   cityName: string;
-  temperature: number; // in celcius
+  temperature: number; // in celsius
 
   constructor(cityName: string) {
     this.cityName = cityName;

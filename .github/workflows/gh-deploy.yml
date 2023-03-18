@@ -1,0 +1,31 @@
+name: gh-pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Setup NODE
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17'
+      - run: node --version
+        env:
+          NODE_OPTIONS: '--openssl-legacy-provider'
+
+      - name: Build web
+        run: |
+          npm install --legacy-peer-deps
+          npm run predeploy
+
+      - name: Build and deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: public
