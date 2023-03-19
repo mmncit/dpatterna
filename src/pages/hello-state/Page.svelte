@@ -6,7 +6,7 @@
 
   $: state = getState(selectedAction);
 
-  $: src = `./images/gate-state/${state}.png`;
+  $: src = `/images/gate-state/${state}.png`;
 
 </script>
 
@@ -26,6 +26,9 @@
     border-collapse: collapse;
     text-align: center;
   }
+  .diagonalCross {
+  background: linear-gradient(to top right, #fff calc(50% - 1px), black , #fff calc(50% + 1px) )
+}
 
 </style>
 
@@ -35,7 +38,7 @@
 
 <table>
   <tr>
-    <th>State vs Action</th>
+    <th class="diagonalCross">State Action</th>
     <th>enter</th>
     <th>payOk</th>
     <th>payFailed</th>

@@ -6,7 +6,7 @@
 
   $: icecream = getIcecream(selected);
 
-  $: src = `./images/icecream-factory/${icecream}.png`;
+  $: src = `/images/icecream-factory/${icecream}.png`;
 
 </script>
 
