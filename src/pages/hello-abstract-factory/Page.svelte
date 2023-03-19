@@ -8,7 +8,7 @@
 
   $: icecream = getIcecream(selectedMenu, selectedContainer);
 
-  $: src = `/images/icecream-factory/${icecream}.png`;
+  $: src = `${process.env.PUBLIC_URL}/images/icecream-factory/${icecream}.png`;
 
 </script>
 

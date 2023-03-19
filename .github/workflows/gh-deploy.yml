@@ -25,6 +25,8 @@ jobs:
       - uses: borales/actions-yarn@v4.2.0
         with:
           cmd: predeploy # will run `yarn predeploy` command
+        env:
+          PUBLIC_URL: "https://mmncit.github.io/dpatterna"
 
       - name: Build and deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
