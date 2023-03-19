@@ -4,7 +4,7 @@
     red1: "red/1",
   };
 
-  let src = `${process.env.PUBLIC_URL}/images/light-receiver/${commands["on"]}.png`;
+  let src = `/images/light-receiver/${commands["on"]}.png`;
 
 </script>
 

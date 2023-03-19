@@ -10,6 +10,9 @@ module.exports = (env, argv) => {
   const prod = mode === "production";
 
   const config = {
+    output: {
+      publicPath: "https://mmncit.github.io/dpatterna",
+    },
     entry: {
       bundle: ["./src/main.ts"],
     },
@@ -68,9 +71,6 @@ module.exports = (env, argv) => {
               options: {
                 name: "[name].[ext]",
                 outputPath: "images",
-                publicPath: "images",
-                postTransformPublicPath: (p) =>
-                  `__webpack_public_path__ + ${p}`,
               },
             },
           ],
