@@ -6,7 +6,7 @@
 
   $: state = getState(selectedAction);
 
-  $: src = `/images/gate-state/${state}.png`;
+  $: src = `${process.env.IMG_PATH}/gate-state/${state}.png`;
 
 </script>
 

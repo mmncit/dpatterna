@@ -1,3 +1,4 @@
+const Webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const path = require("path");
@@ -10,9 +11,6 @@ module.exports = (env, argv) => {
   const prod = mode === "production";
 
   const config = {
-    output: {
-      publicPath: "https://mmncit.github.io/dpatterna",
-    },
     entry: {
       bundle: ["./src/main.ts"],
     },
@@ -70,7 +68,7 @@ module.exports = (env, argv) => {
               loader: "file-loader",
               options: {
                 name: "[name].[ext]",
-                outputPath: "images",
+                outputPath: path.resolve(__dirname, "public", "images"),
               },
             },
           ],
@@ -81,6 +79,9 @@ module.exports = (env, argv) => {
     plugins: [
       new MiniCssExtractPlugin({
         filename: "[name].css",
+      }),
+      new Webpack.EnvironmentPlugin({
+        IMG_PATH: prod ? "https://mmncit.github.io/dpatterna/images" : "images",
       }),
     ],
     devtool: prod ? false : "source-map",

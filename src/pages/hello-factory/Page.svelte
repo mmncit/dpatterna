@@ -6,7 +6,7 @@
 
   $: icecream = getIcecream(selected);
 
-  $: src = `/images/icecream-factory/${icecream}.png`;
+  $: src = `${process.env.IMG_PATH}/icecream-factory/${icecream}.png`;
 
 </script>
 
