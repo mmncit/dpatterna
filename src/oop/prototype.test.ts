@@ -43,7 +43,7 @@ describe("prototype", () => {
 
     expect(() => {
       user1.buggyIncrement();
-    }).toThrowError("Cannot read properties of undefined (reading 'score')");
+    }).toThrow("Cannot read properties of undefined (reading 'score')");
   });
 
   test("arrow functions bypass the issue referring to window object", () => {

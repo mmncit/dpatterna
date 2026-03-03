@@ -7,6 +7,6 @@ describe("subclasses", () => {
     paidUser1.increaseBalance();
     expect(paidUser1.accountBalance).toBe(26);
     paidUser1.login();
-    expect(console.log).toBeCalledWith("logged in as Alyssa");
+    expect(console.log).toHaveBeenCalledWith("logged in as Alyssa");
   });
 });

@@ -43,11 +43,11 @@
   "scripts": {
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist",
-    "test": "jest --coverage --config jest.config.js --silent",
+    "test": "jest --coverage --config jest.config.cjs --silent",
     "lint": "pnpm lint:types && pnpm lint:ci",
     "lint:types": "pnpm tsc --noEmit -p .",
     "lint:ci": "eslint . --ext .tsx,.ts",
-    "test:dev": "jest --config jest.config.js",
+    "test:dev": "jest --config jest.config.cjs",
     "build": "vite build",
     "dev": "vite",
     "start": "vite",

@@ -23,13 +23,14 @@ module.exports = {
     "<rootDir>/test/helpers",
     "__mocks__",
     "/node_modules/",
+    "<rootDir>/tests/",
   ],
   transform: {
-    "^.+\\.[jt]sx?$": "ts-jest",
+    "^.+\\.[jt]sx?$": ["ts-jest", { isolatedModules: true }],
   },
   resetMocks: true,
   moduleDirectories: ["node_modules", "src"],
-  testURL: "http://localhost",
+  testEnvironmentOptions: { url: "http://localhost" },
   moduleFileExtensions: ["js", "jsx", "json", "ts", "tsx"],
   modulePathIgnorePatterns: ["/node_modules/"],
   coveragePathIgnorePatterns: [
@@ -37,9 +38,4 @@ module.exports = {
     "<rootDir>/src/__tests__",
     "<rootDir>/src/main.ts",
   ],
-  globals: {
-    "ts-jest": {
-      isolatedModules: true,
-    },
-  },
 };
