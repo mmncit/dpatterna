@@ -1,12 +1,12 @@
 <script>
   import { getState } from "./state-provider";
 
-  let selectedAction = "enter";
+  let selectedAction = $state("enter");
   let action = ["enter", "payOk", "payFailed"];
 
-  $: state = getState(selectedAction);
+  let state = $derived(getState(selectedAction));
 
-  $: src = `${process.env.IMG_PATH}/gate-state/${state}.png`;
+  let src = $derived(`${process.env.IMG_PATH}/gate-state/${state}.png`);
 
 </script>
 
@@ -37,24 +37,28 @@
 <h2>State diagram</h2>
 
 <table>
-  <tr>
-    <th class="diagonalCross">State Action</th>
-    <th>enter</th>
-    <th>payOk</th>
-    <th>payFailed</th>
-  </tr>
-  <tr>
-    <td>closed</td>
-    <td>closed</td>
-    <td>open</td>
-    <td>closed</td>
-  </tr>
-  <tr>
-    <td>open</td>
-    <td>closed</td>
-    <td>open</td>
-    <td>open</td>
-  </tr>
+  <thead>
+    <tr>
+      <th class="diagonalCross">State Action</th>
+      <th>enter</th>
+      <th>payOk</th>
+      <th>payFailed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>closed</td>
+      <td>closed</td>
+      <td>open</td>
+      <td>closed</td>
+    </tr>
+    <tr>
+      <td>open</td>
+      <td>closed</td>
+      <td>open</td>
+      <td>open</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2>Actions</h2>

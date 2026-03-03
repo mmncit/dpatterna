@@ -1,12 +1,12 @@
 <script>
   import { getIcecream } from "./prouct-provider";
 
-  let selected = "Choco Blast";
+  let selected = $state("Choco Blast");
   let menu = ["Choco Blast", "Sweety Strawberry", "Buttery Butterscotch"];
 
-  $: icecream = getIcecream(selected);
+  let icecream = $derived(getIcecream(selected));
 
-  $: src = `${process.env.IMG_PATH}/icecream-factory/${icecream}.png`;
+  let src = $derived(`${process.env.IMG_PATH}/icecream-factory/${icecream}.png`);
 
 </script>
 

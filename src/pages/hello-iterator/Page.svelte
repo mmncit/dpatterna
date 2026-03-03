@@ -45,4 +45,4 @@
 
 <h1>Weather today</h1>
 
-<div bind:this={el} class="chart" />
+<div bind:this={el} class="chart"></div>

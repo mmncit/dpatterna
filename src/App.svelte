@@ -21,12 +21,19 @@
     { title: "web-worker", component: WebWorker },
   ];
 
-  let page;
-  router("/", () => (page = Home));
+  let CurrentPage = $state(Home);
+  
+  router("/", () => {
+    CurrentPage = Home;
+  });
+  
   for (let i = 0; i < examples.length; i++) {
     const example = examples[i];
-    router(`/${example.title}`, () => (page = example.component));
+    router(`/${example.title}`, () => {
+      CurrentPage = example.component;
+    });
   }
+  
   router.start();
 
 </script>
@@ -82,6 +89,8 @@
     {/each}
   </div>
   <div id="panel">
-    <svelte:component this={page} />
+    {#if CurrentPage}
+      <CurrentPage />
+    {/if}
   </div>
 </main>

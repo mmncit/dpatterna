@@ -48,7 +48,7 @@
     accept="image/*"
     name="input"
     id="input"
-    on:change={onChange} />
+    onchange={onChange} />
   <label for="input">Choose file</label>
-  <div id="preview"><canvas width="10" height="10" bind:this={canvas} /></div>
+  <div id="preview"><canvas width="10" height="10" bind:this={canvas}></canvas></div>
 </body>
