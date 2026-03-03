@@ -12,19 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set Node.js 16.x
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Set Node.js 24.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: 'yarn'
+          node-version: 24.x
+          cache: 'pnpm'
 
-      - name: Run install
-        uses: borales/actions-yarn@v4.2.0
-        with:
-          cmd: install --frozen-lockfile # will run `yarn install` command
-      - uses: borales/actions-yarn@v4.2.0
-        with:
-          cmd: predeploy # will run `yarn predeploy` command
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm predeploy
         env:
           PUBLIC_URL: "https://mmncit.github.io/dpatterna"
 
