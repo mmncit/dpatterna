@@ -1,49 +1,66 @@
 # dpatterna
 
-Design pattern are well-known solutions to recurring problems. This repo holds some of the classical introductory exercises for different design patterns
+Design patterns are well-known solutions to recurring problems. This repo holds some of the classical introductory exercises for different design patterns.
 
-# For `ts`/`js` files:
+## Tech Stack
 
-## Install dependencies
+- **Framework:** [Svelte 5](https://svelte.dev/) (runes mode)
+- **Build Tool:** [Vite](https://vite.dev/)
+- **Language:** TypeScript
+- **Package Manager:** [pnpm](https://pnpm.io/)
+- **Testing:** Jest (unit), Playwright (e2e)
+- **Deployment:** GitHub Pages
 
-```bash
-yarn install
-```
+## Getting Started
 
-## Running the test suite
-
-Execute the tests with:
-
-```bash
-yarn test
-```
-
-Once you get a test passing, you can enable the next one by changing `xit` to `it`.
-
-## Running web app
+### Install dependencies
 
 ```bash
-yarn # install dependencies
-
-yarn start # invoke development with webpack-dev-server
+pnpm install
 ```
 
-## Execute a script as `node` + `tsc`
+### Running the web app
 
 ```bash
-yarn ts-node <file_path>
-# e.g. $yarn ts-node src/functional/closure/adjectifier.ts
+pnpm start
 ```
 
-# For `py` files: (python version >= 3)
-Just run with 
+Opens the dev server at [http://localhost:9000](http://localhost:9000).
 
-```sh
-python <file_path>
+### Running the test suite
+
+```bash
+pnpm test        # run all unit tests with coverage
+pnpm test:dev    # run tests in verbose/watch mode
 ```
 
-or
+### Running e2e tests
 
+```bash
+pnpm playwright test
+```
+
+### Build for production
+
+```bash
+pnpm build       # outputs to dist/
+pnpm preview     # preview the production build
+```
+
+### Deploy to GitHub Pages
+
+```bash
+pnpm deploy
+```
+
+### Execute a script with `ts-node`
+
+```bash
+pnpm ts-node <file_path>
+# e.g. pnpm ts-node src/functional/closure/adjectifier.ts
+```
+
+## For `py` files (Python >= 3)
 
 ```sh
 python3 <file_path>
